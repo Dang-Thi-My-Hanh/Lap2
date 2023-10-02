@@ -128,4 +128,26 @@ public class Task2_2 {
             System.out.println();
 		}
 	}
+//         * * * * * * * * * 
+	    * * * * * * * * 
+	     * * * * * * * 
+	      * * * * * * 
+	       * * * * * 
+	        * * * * 
+	         * * * 
+	          * * 
+	           * 
+	public static void drawPyramid_6(int n) {
+		for (int line = n; line >= 1; line--) {
+            for (int j = n - line; j >= 0; j--) {
+ 
+                // for left spacing
+                System.out.print(" ");
+            }
+            for(int i =line; i>= 1;i--) {
+            	System.out.print("* ");
+            }
+            System.out.println();
+		}
+	}
 }
