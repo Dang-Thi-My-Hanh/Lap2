@@ -1,0 +1,41 @@
+package Task2;
+
+import java.util.Scanner;
+
+public class Task2_3 {
+	/*            
+    X
+    X
+   XXX
+    X
+   XXX
+  XXXXX
+    X
+   XXX
+  XXXXX
+ XXXXXXX
+*/
+	public static void drawChristmasTree(int n) {
+	   for(int u=1;u<=n;u++){
+		for (int line = 1; line <= u; line++) {
+            for (int j = 0; j <= n - line; j++) {
+ 
+                // for left spacing
+                System.out.print(" ");
+            }
+            for(int i =1; i<= line+line-1;i++) {
+            	System.out.print("X");
+            }
+            System.out.println();
+		}
+	   }
+	}
+	public static void main(String[] args) {
+		Task2_3 t1 = new Task2_3();
+		Scanner input = new Scanner(System.in);
+		System.out.println(" So n : ");
+		int n = input.nextInt();
+		drawChristmasTree(n);
+
+    }
+}
