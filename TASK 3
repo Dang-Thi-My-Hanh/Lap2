@@ -1,0 +1,36 @@
+package Task1;
+import java.io.*;
+import java.util.Scanner;
+public class PascalTriangle {
+	// This method is used to display a Pascal triangle based on the parameter n.
+	// Where n represents the number of rows
+	public static void printPascalTriangle(int row) {
+
+			for (int line = 1; line <= row; line++) {
+	            for (int j = 0; j <= row - line; j++) {
+	 
+	                // for left spacing
+	                System.out.print(" ");
+	            }
+	 
+	            // used to represent C(line, i)
+	            int a = 1;
+	            for (int i = 1; i <= line; i++) {
+	 
+	                // The first value in a line is always 1
+	                System.out.print(a + " ");
+	                a = a * (line - i) / i;
+	            }
+	            System.out.println();
+	        }
+	    }
+	 
+	    // Driver code
+	public static void main(String[] args){
+	    PascalTriangle f1 = new PascalTriangle();
+			Scanner input = new Scanner(System.in);
+			System.out.println(" So n : ");
+			int n = input.nextInt();
+	        printPascalTriangle(n);
+	    }	
+}
